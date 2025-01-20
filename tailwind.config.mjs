@@ -26,11 +26,17 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#00224D",
+        secondary: "#001B3E",
+        activehover: "#FF204E",
+        button: "#A0153E",
+        buttonhover: "#5D0E41",
       },
       fontFamily: {
         dmSans: ['"DM Sans"', "sans-serif"],
         dmSerif: ['"DM Serif Text"', "serif"],
         dmSerifDis: ['"DM Serif Display"', "serif"],
+        intert: ["Inter Tight", "serif"],
       },
       container: {
         center: true,
