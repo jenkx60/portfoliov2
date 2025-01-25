@@ -28,7 +28,7 @@ const HomePage = () => {
           transition={{ duration: 1 }}
           className='container w-1/2 bg-primary flex flex-col justify-center place-items-start text-left gap-5'
         >
-          <h2 className='text-4xl  font-intert text-left'>Hello, Im</h2>
+          <h2 className='text-4xl  font-intert text-left'>Hello, I&apos;m</h2>
 
           <h1 className='text-9xl text-left font-extrabold font-intert'>Jenkins <br /> Uwagbai</h1>
 
