@@ -5,6 +5,7 @@ import DownloadCVButton from '../components/DownloadCVButton';
 import Image from 'next/image';
 import undraw from '@/app/public/undraw_web-developer.svg'
 import ProgressBar from '../components/ProgressBar';
+import SkillWall from '../components/SkillWall';
 
 const About = () => {
   return (
@@ -113,6 +114,10 @@ const About = () => {
                     <ProgressBar />
                 </div>
             </div>
+        </motion.div>
+
+        <motion.div>
+            <SkillWall />
         </motion.div>
     </div>
   )
