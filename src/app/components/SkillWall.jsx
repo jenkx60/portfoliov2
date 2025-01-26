@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import html from '@/app/public/html-icon.svg';
 import css from '../public/css-icon.svg';
 import javascript from '../public/javascript-programming-language-icon.svg';
@@ -9,7 +9,8 @@ import git from '../public/git-icon.svg';
 import github from '../public/github-icon.svg';
 import bootstrap from '../public/bootstrap-5-logo-icon.svg';
 import tailwind from '../public/tailwind-css-icon.svg';
-import LogoWall from '../../../LogoWall/LogoWall';
+import Image from 'next/image';
+import * as motion from 'motion/react-client';
 
 const SkillWall = () => {
     const skillImg = [
@@ -23,18 +24,30 @@ const SkillWall = () => {
         { imgUrl: bootstrap, altText: 'Bootstrap'},
         { imgUrl: tailwind, altText: 'Tailwind'},
     ]
-    console.log(skillImg)
+
+    const box = {
+        width: '100',
+        height: '100',
+        borderRadius: 10,
+    }
 
   return (
-    <div>
-        <LogoWall
-            items={skillImg}
-            direction='horizontal'
-            pauseOnHover={true}
-            duration='60s'
-            bgColor='#FF204E' 
-            size='clamp(8rem, 1rem + 20vmin, 25rem)'
-        />
+    <div className='flex justify-center gap-5'>
+        {skillImg.map((item, index) => (
+            <motion.div
+                whileHover={{ scale: 1.5 }}
+                whileTap={{ scales: 0.9 }}
+                style={box}
+            >
+                <div key={index} className='bg-primary rounded-full shadow-md p-4 flex justify-center items-center'>
+                    <Image
+                        src={item.imgUrl}
+                        alt={item.altText}
+                        className='w-12 h-12 object-contain' 
+                    />
+                </div>
+            </motion.div>
+        ))}
     </div>
   )
 }

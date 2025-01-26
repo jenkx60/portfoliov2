@@ -119,6 +119,8 @@ const About = () => {
         <motion.div>
             <SkillWall />
         </motion.div>
+
+        
     </div>
   )
 }
